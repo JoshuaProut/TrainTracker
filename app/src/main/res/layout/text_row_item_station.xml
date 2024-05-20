@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutTubeLine"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:gravity="center_vertical"
+    android:outlineProvider="bounds">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutStation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:outlineProvider="paddedBounds">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:foregroundGravity="top"
+            android:outlineProvider="background"
+            android:text="@string/arrivals_button_text"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:translationZ="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonOpenMaps"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="193dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight=".60"
+            android:backgroundTint="@color/red"
+            android:onClick="openMapsIntent"
+            android:outlineProvider="none"
+            android:text="@string/maps_button_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/buttonOpenArrivals"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="111dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight=".60"
+            android:backgroundTint="@color/red"
+            android:onClick="openArrivals"
+            android:text="@string/arrivals_button_label"
+            android:textColor="#000000"
+            android:textSize="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
